@@ -1,0 +1,172 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Music Player</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="music-player">
+
+    <!-- Top -->
+
+    <div class="top-bar">
+
+      <i class="fa-solid fa-angle-left"></i>
+
+      <h4>Now Playing</h4>
+
+      <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+    <!-- Image -->
+
+    <div class="image">
+
+      <img id="cover"
+      src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+    <!-- Song Details -->
+
+    <div class="song-details">
+
+      <h2 id="title">Night Changes</h2>
+
+      <p id="artist">One Direction</p>
+
+    </div>
+
+    <!-- Progress -->
+
+    <div class="progress-area">
+
+      <input type="range" id="progress" value="0">
+
+      <div class="time">
+
+        <span id="current">0:00</span>
+
+        <span id="duration">0:00</span>
+
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+
+    <div class="controls">
+
+      <i class="fa-solid fa-backward-step" id="prev"></i>
+
+      <button id="play">
+
+        <i class="fa-solid fa-play"></i>
+
+      </button>
+
+      <i class="fa-solid fa-forward-step" id="next"></i>
+
+    </div>
+
+    <!-- Volume -->
+
+    <div class="volume">
+
+      <i class="fa-solid fa-volume-high"></i>
+
+      <input type="range" id="volume"
+      min="0"
+      max="100"
+      value="100">
+
+    </div>
+
+    <!-- Playlist -->
+
+    <div class="playlist">
+
+      <h3>Playlist</h3>
+
+      <div class="song active" data-index="0">
+
+        <img
+        src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
+
+        <div>
+
+          <h4>Night Changes</h4>
+
+          <p>One Direction</p>
+
+        </div>
+
+      </div>
+
+      <div class="song" data-index="1">
+
+        <img
+        src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop">
+
+        <div>
+
+          <h4>Dream Beats</h4>
+
+          <p>Alan Walker</p>
+
+        </div>
+
+      </div>
+
+      <div class="song" data-index="2">
+
+        <img
+        src="https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=1200&auto=format&fit=crop">
+
+        <div>
+
+          <h4>Summer Vibes</h4>
+
+          <p>Marshmello</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Audio -->
+
+  <audio id="audio"></audio>
+
+  <!-- JS -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
